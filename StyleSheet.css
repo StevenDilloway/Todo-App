@@ -1,0 +1,43 @@
+h1 {
+    font-family: 'Palatino Linotype';
+    text-transform: uppercase;
+    text-align: center;
+    height: 150px;
+    color: white;
+    background-color: rgb(83, 91, 93);
+    padding:3px;
+    margin: 3px;
+    outline-style: solid;
+    outline-width: 1px;
+    outline-color: white;
+}
+
+body {
+    background-image: url(background.jpg);
+}
+ul {
+    list-style-type: none;
+    margin-bottom: 15px;
+    overflow: hidden;
+    background-color: rgb(83, 91, 93);
+    outline-style: solid;
+    outline-width: 1px;
+    outline-color: white;
+    font-family: 'Palatino Linotype';
+
+}
+
+footer {
+    text-align: center;
+    color: white;
+    clear: left;
+    font-style: italic;
+    height: auto;
+    background-color: rgb(83, 91, 93);
+    margin: 15px;
+    outline-style: solid;
+    outline-color: white;
+    outline-width: 1px;
+    font-family: 'Palatino Linotype';
+
+}
