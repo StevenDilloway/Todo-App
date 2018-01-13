@@ -2,7 +2,7 @@ h1 {
     font-family: 'Palatino Linotype';
     text-transform: uppercase;
     text-align: center;
-    height: 150px;
+    height: 135px;
     color: white;
     background-color: rgb(83, 91, 93);
     padding:3px;
@@ -12,32 +12,97 @@ h1 {
     outline-color: white;
 }
 
+h3{
+    font-family: 'Palatino Linotype';
+    color: white;
+}
+
 body {
     background-image: url(background.jpg);
+    font-family: "Palatino Linotype";
 }
+
+li {
+    display: inline;
+    padding: 15px;
+    float: left;
+}
+
+li a {
+    color: white;
+    text-align: center;
+    text-decoration: none;
+}
+
+li a:hover{
+    color: black;
+}
+
+
 ul {
     list-style-type: none;
-    margin-bottom: 15px;
+    margin-bottom: 12px;
     overflow: hidden;
     background-color: rgb(83, 91, 93);
     outline-style: solid;
     outline-width: 1px;
     outline-color: white;
     font-family: 'Palatino Linotype';
+}
 
+.form {
+    background-color: rgb(83, 91, 93);
+    text-align: center;
+}
+
+.table {
+    background-color: rgb(83, 91, 93);
+}
+table{
+    border: 1px solid white;
+    width: 99%;
+    border-collapse: collapse;
+    margin-left: inherit;
+}
+td, th{
+    padding: 5px;
+    border: 1px solid white;
+    text-align: center;
+    margin: 10px;
+}
+
+
+fieldset {
+    color: white;
+}
+
+input {
+    width: 50%;
+}
+textarea {
+    width: 50%;
+}
+
+.query {
+    background-color: rgb(83, 91, 93);
+    outline-style: solid;
+    outline-width: 1px;
+    outline-color: white;
+    font-family: 'Palatino Linotype';
+    padding: 5px;
+    text-align: center;
 }
 
 footer {
+    margin: 15px;
     text-align: center;
     color: white;
     clear: left;
     font-style: italic;
     height: auto;
     background-color: rgb(83, 91, 93);
-    margin: 15px;
     outline-style: solid;
     outline-color: white;
     outline-width: 1px;
     font-family: 'Palatino Linotype';
-
 }

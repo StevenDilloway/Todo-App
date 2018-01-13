@@ -8,7 +8,7 @@
 <body>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <header>
-    <h1><b>In Progress</b></h1>
+    <h1><br><b>In Progress</b></h1>
 </header>
 <nav>
     <ul>
@@ -18,6 +18,22 @@
         <li><a href="Complete.php">Complete and Past Due</a></li>
     </ul>
 </nav>
+
+<div class="table">
+    <fieldset>
+        <table>
+            <tr>
+                <th>Task Id</th>
+                <th>Name</th>
+                <th>Description</th>
+                <th>Due Date</th>
+                <th>Status</th>
+            </tr>
+        </table>
+    </fieldset>
+    </form>
+</div>
+
 </body>
 <footer> <!-- I used this from CSC 3750 for official purposes, hoping this is ok-->
     Copyright &copy 2018 Wayne State University<br />
