@@ -27,7 +27,7 @@ if($conn->query($sql) === FALSE){
 $sql = "CREATE TABLE IF NOT EXISTS ToDo (
   taskId INTEGER AUTO_INCREMENT, 
   taskName VARCHAR(30), 
-  taskDescription VARCHAR(30), 
+  taskDescription VARCHAR(140), 
   status VARCHAR(30),
   dueDate DATE, 
   totalTasks INTEGER,
@@ -40,7 +40,7 @@ if($conn->query($sql) === FALSE){
 $sql = "CREATE TABLE IF NOT EXISTS Completed (
   taskId INTEGER AUTO_INCREMENT, 
   taskName VARCHAR (30), 
-  taskDescription VARCHAR (30), 
+  taskDescription VARCHAR (140), 
   status VARCHAR(30),
   dueDate DATE, 
   totalTasks INTEGER,
@@ -53,7 +53,7 @@ if($conn->query($sql) === FALSE){
 $sql = "CREATE TABLE IF NOT EXISTS Late (
   taskId INTEGER AUTO_INCREMENT, 
   taskName VARCHAR (30), 
-  taskDescription VARCHAR (30), 
+  taskDescription VARCHAR (140), 
   status VARCHAR (30),
   dueDate DATE, 
   totalTasks INTEGER,
@@ -78,7 +78,7 @@ $conn -> close();
 <body>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <header>
-    <h1><b>Welcome to the ToDo Application</b></h1>
+    <h1><br><b>Welcome to the ToDo Application</b></h1>
 </header>
 <nav>
     <ul>
@@ -88,6 +88,11 @@ $conn -> close();
         <li><a href="Complete.php">Complete and Past Due</a></li>
     </ul>
 </nav>
+
+<div class="query">
+    <p><h3>Below is a list of the total taks in the system<h3><p></p>
+</div>
+
 </body>
 <footer> <!-- I used this from CSC 3750 for official purposes, hoping this is ok-->
     Copyright &copy 2018 Wayne State University<br />
