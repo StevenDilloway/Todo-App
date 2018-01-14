@@ -20,7 +20,7 @@
 </nav>
 
 <div class="form">
-    <form action="/action_page.php">
+    <form action="insert.php" method="post">
         <fieldset>
             <p style="padding-left: 25px;"><h3>Please fill out the form below to add a task to your current ToDo List.</h3></p>
 
@@ -35,6 +35,9 @@
                 <input type="submit" name="submit" value="INSERT"><br><br>
         </fieldset>
     </form>
+
+    <br><br>
+
 </div>
 
 </body>
