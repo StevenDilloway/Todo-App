@@ -1,3 +1,14 @@
+<?php
+$servername ="localhost";
+$username = "root";
+$password = "";
+
+//Create connection
+//new object of mysqli
+$conn = new mysqli($servername, $username, $password);
+
+?>
+
 <!DOCTYPE HTML>
 <link rel="stylesheet" href="StyleSheet.css" type="text/css">
 <html lang = "en">
@@ -20,7 +31,7 @@
 </nav>
 
 <div class="form">
-    <form action="insert.php" method="post">
+    <form action="ToDo.php" method="post">
         <fieldset>
             <p style="padding-left: 25px;"><h3>Please fill out the form below to add a task to your current ToDo List.</h3></p>
 
@@ -37,6 +48,22 @@
     </form>
 
     <br><br>
+
+    <?php
+    $sql ="USE ToDoApp";
+    $conn->query($sql);
+
+    if(!empty($_POST["taskname"]) && !empty($_POST["description"])
+            &&!empty($_POST["date"]) &&!empty($_POST["status"]))
+    {
+        $query = "INSERT INTO todo (taskName, taskDescription, status, dueDate)
+              VALUES ('$_POST[taskname]','$_POST[description]','$_POST[status]','$_POST[date]')";
+
+        $conn->query($query);
+    }
+
+
+   ?>
 
 </div>
 
