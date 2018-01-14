@@ -29,7 +29,7 @@ $sql = "CREATE TABLE IF NOT EXISTS ToDo (
   taskName VARCHAR(30), 
   taskDescription VARCHAR(140), 
   status VARCHAR(30),
-  dueDate DATE, 
+  dueDate VARCHAR(20), 
   totalTasks INTEGER,
   PRIMARY KEY (taskId))";
 if($conn->query($sql) === FALSE){
