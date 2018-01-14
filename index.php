@@ -67,7 +67,6 @@ $conn -> close();
 ?>
 
 
-
 <!DOCTYPE HTML>
 <link rel="stylesheet" href="StyleSheet.css" type="text/css">
 <html lang = "en">
