@@ -92,6 +92,29 @@ $conn -> close();
     <p><h3>Below is a list of the total taks in the system<h3><p></p>
 </div>
 
+<div class="table">
+    <fieldset>
+        <table>
+            <tr>
+                <th>Task Id</th>
+                <th>Name</th>
+                <th>Description</th>
+                <th>Due Date</th>
+                <th>Status</th>
+            </tr>
+        </table>
+    </fieldset>
+    </form>
+</div>
+<?php
+//query for view which is select
+//mySQLi function where u need to pass the db connetction and query assign to a variable
+//while mysqli function {
+//echo "<td>" .$row['name of col']."</td>";
+?>
+
+
+
 </body>
 <footer> <!-- I used this from CSC 3750 for official purposes, hoping this is ok-->
     Copyright &copy 2018 Wayne State University<br />

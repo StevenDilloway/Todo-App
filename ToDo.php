@@ -65,7 +65,28 @@ $conn = new mysqli($servername, $username, $password);
 
    ?>
 
+
+
+<br>
+
+<div class="form">
+    <fieldset>
+        <p style="padding-left: 25px;"><h3>Please select the task you want to delete a task</h3></p>
+    <form mothod = "post">
+
+        taskId: <select class="form-dropdown" id="dropdown" name="taskid">
+            <?php
+
+            ?>
+        </select>
+
+    </form>
+        <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+    </fieldset>
 </div>
+
+
+<br>
 
 </body>
 <footer> <!-- I used this from CSC 3750 for official purposes, hoping this is ok-->
