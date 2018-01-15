@@ -89,20 +89,8 @@ $conn -> close();
 </nav>
 
 <div class="query">
-    <p><h3>Below is a list of the total taks in the system<h3></p>
+    <p><h3>Below is a list of the total tasks in the system<h3></p>
 </div>
-
-<?php
-
-$sql
-
-//query for view which is select
-//mySQLi function where u need to pass the db connetction and query assign to a variable
-//while mysqli function {
-//echo "<td>" .$row['name of col']."</td>";
-
-?>
-
 <div class="table">
     <fieldset>
         <table>
@@ -112,28 +100,63 @@ $sql
                 <th>Description</th>
                 <th>Due Date</th>
                 <th>Status</th>
-                <?php
-                $query = "SELECT * FROM todo";
-                $result= $conn->mysqli_query($query);
-                while($row = mysqli_fetch_array($result))
-                {
-                    echo "<td>" . $row['taskId']. "</td>";
-                    echo "<td>" . $row['taskName']. "</td>";
-                    echo "<td>" . $row['taskDescription']. "</td>";
-                    echo "<td>" . $row['dueDate']. "</td>";
-                    echo "<td>" . $row['status']. "</td>";
-                }
-
-                ?>
             </tr>
-        </table>
-    </fieldset>
+
 
 </div>
+<fieldset>
+<?php
+$servername ="localhost";
+$username = "root";
+$password = "";
+
+//Create connection
+//new object of mysqli
+$conn = new mysqli($servername, $username, $password);
+//Check connection
+if ($conn -> connect_error){
+die("Failed to connect: " . $conn->connect_error);
+}
+
+//Create database
+$sql = "CREATE DATABASE IF NOT EXISTS ToDoApp";
+if($conn->query($sql) === FALSE){
+echo "Database NOT created" . $conn->error;
+}
+
+$sql = "USE ToDoApp";
+
+if($conn->query($sql) === FALSE){
+echo "Database NOT created" . $conn->error;
+}
+$conn->query($sql);
+$sql = "SELECT * FROM todo";
+$result = $conn->query($sql);
 
 
+while($row = mysqli_fetch_assoc($result)){
+  echo "<tr><td>";
+  echo $row["taskId"];
+  echo "</td><td>";
+  echo $row["taskName"];
+  echo "</td><td>";
+  echo $row["taskDescription"];
+    echo "</td><td>";
+    echo $row["dueDate"];
+    echo "</td><td>";
+    echo $row["status"];
+    echo "</td></tr>";
 
 
+   // echo "taskId: " . $row["taskId"]. " taskName: " .
+   //         $row["taskName"]. " taskDescription" . $row["taskDescription"].
+   //         "<br>";
+   //echo"{$row['taskId']}<br>";
+}
+?>
+
+    </table>
+</fieldset>
 
 </body>
 <footer> <!-- I used this from CSC 3750 for official purposes, hoping this is ok-->
