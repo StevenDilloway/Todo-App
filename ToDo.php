@@ -77,8 +77,20 @@ $conn = new mysqli($servername, $username, $password);
         taskId: <select class="form-dropdown" id="dropdown" name="taskid">
             <?php
 
+            $sql = "SELECT * FROM todo";
+            $result = $conn->query($sql);
+
+                echo "<select name='taskId'>";
+
+                while($row=mysqli_fetch_array($result))
+                {
+                    echo '<option value="' . $row['taskId'] . '">';
+                    echo $row['taskId'];
+                    echo"</option>";
+                }
+                       echo "</select>"
             ?>
-        </select>
+
 
     </form>
         <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
